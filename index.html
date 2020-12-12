@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Life</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body style="background-color: purple;">
+    <script language="JavaScript">
+        var slideIndex = 0;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 12</div>
+      <img src="images\colorful2.jpg" style="width:100%">
+      <div class="text">Life can be creative. Life can be colorful.</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 12</div>
+      <img src="images\darkness.gif" style="width:100%">
+      <div class="text">Life can be dark some times.</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 12</div>
+      <img src="images\forest.gif" style="width:100%">
+      <div class="text">One moment you could find yourself waking up in the middle of a forest.</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 12</div>
+      <img src="images\thesky.gif" style="width:100%">
+      <div class="text">The world around you seems to be changing in the blink of an eye.</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 12</div>
+      <img src="images\dogmeaningoflife.gif" style="width:100%">
+      <div class="text">Perhaps you might be inclined to ask...what is the meaning of all of this? The meaning of life?</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">6 / 12</div>
+        <img src="images\nextpage.png" style="width:100%; margin-top: 150px;">
+        <div class="text">Go on to the next page for the answer...</div>
+    </div>
+      
+    <div class="mySlides fade">
+        <div class="numbertext">7 / 12</div>
+        <img src="images\blackscreen.jpg" style="width:100%">
+        <div class="text"></div>
+    </div>
+  
+    <div class="mySlides fade">
+        <div class="numbertext">8 / 12</div>
+        <img src="images\surprised.gif" style="width:100%">
+        <div class="text">What? An empty screen? Were you surprised that there was no meaning?</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">9 / 12</div>
+        <img src="images\thesky.gif" style="width:100%">
+        <div class="text">That's right. There is no set meaning of life.</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">10 / 12</div>
+        <img src="images\you.jpeg" style="width:100%">
+        <div class="text">Until you give it one. What is your meaning? That is what belongs on that empty screen for you, personally.</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">11 / 12</div>
+        <img src="images\life.gif" style="width:50%">
+        <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade worksCited" style="background-color: orange;">
+        <div class="numbertext">12 / 12</div>
+        <img src="" style="width:100%;">
+        <b style="text-decoration: underline;">Links to the images & gifs used:</b>
+        <p>http://www.lunarpup.com/animations/image/colorwheel.jpg</p>
+        <p>https://giphy.com/gifs/beckychung-existential-crisis-26gJz271AbXhq355e</p>
+        <p>https://media.giphy.com/media/3oEduToZcGH8HG0sfK/giphy.gif</p>
+        <p>https://giphy.com/gifs/love-heart-rainbow-3og0IQ29pE7zRwbh60</p>
+        <p>https://www.lovethispic.com/uploaded_images/124508-Life.gif</p>
+        <p>https://giphy.com/gifs/forest-autumn-leaves-UxTZDNv0Zej4s</p>
+        <p>https://content.thriveglobal.com/wp-content/uploads/2018/03/Blog_9_Ways_to_Take_Responsiblity_for_Your_Life.jpeg</p>
+        <p>http://wcfnation.com/men/wp-content/uploads/2015/09/next-page-green.png</p>
+        <br>
+        <b style="color: red;">Designed by: Derek G.</b>
+    </div>
+
+    <h1 class="life">About Life.</h1>
+    <h3 class="start">Click on the first bubble or arrow to start the slideshow website.</h3>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+    <span class="dot" onclick="currentSlide(11)"></span>
+    <span class="dot" onclick="currentSlide(12)"></span>
+  </div>
+  <footer>
+    <p style="text-align: center;">© Copyright 2020</p>
+  </footer>
+</body>
+</html>
